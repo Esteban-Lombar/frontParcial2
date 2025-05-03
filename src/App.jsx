@@ -1,15 +1,13 @@
-import { useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import EstatutoTable from './components/EstatutoTable';
 
 function App() {
-  useEffect(() => {
-    const baseURL = import.meta.env.VITE_API_URL;
-    axios.get(`${baseURL}/usuarios`)
-      .then(res => console.log(res.data))
-      .catch(err => console.error(err));
-  }, []);
-
-  return <h1>Hola</h1>;
+  return (
+    <div className="App">
+      <h1>Proyecto Merln</h1>
+      <EstatutoTable />
+    </div>
+  );
 }
 
 export default App;
